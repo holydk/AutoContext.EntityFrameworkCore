@@ -1,7 +1,18 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageId>AutoContext.EntityFrameworkCore</PackageId>
+    <Description>AutoContext is a lightweight extension of Entity Framework Core for entity to entity configuration mapping.</Description>
     <Version>0.1.0</Version>
+    <Authors>Dmitry Kiselev</Authors>
+    <PackageTags>entity-framework;database;mapping-tools;orm;orm-extension</PackageTags>
+    <PackageProjectUrl>https://github.com/holydk/AutoContext.EntityFrameworkCore</PackageProjectUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReleaseNotes>https://github.com/holydk/AutoContext.EntityFrameworkCore/releases</PackageReleaseNotes>
+    <RepositoryUrl>https://github.com/holydk/AutoContext.EntityFrameworkCore</RepositoryUrl>
+
+    <!-- Declare that the Repository URL can be published to NuSpec -->
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.6"/>
