@@ -2,7 +2,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>AutoContext.EntityFrameworkCore</PackageId>
-    <Description>AutoContext is a lightweight extension of Entity Framework Core for entity to entity configuration mapping.</Description>
+    <Description>AutoContext.EntityFrameworkCore is a lightweight extension of Entity Framework Core for entity to entity configuration mapping.</Description>
     <Version>0.1.0</Version>
     <Authors>Dmitry Kiselev</Authors>
     <PackageTags>entity-framework;database;mapping-tools;orm;orm-extension</PackageTags>
