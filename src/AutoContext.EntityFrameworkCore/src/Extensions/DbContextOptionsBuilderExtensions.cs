@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 namespace Microsoft.EntityFrameworkCore
 {
     /// <summary>
-    /// SQL Server specific extension methods for <see cref="DbContextOptionsBuilder" />.
+    /// Extension methods for <see cref="DbContextOptionsBuilder" />.
     /// </summary>
-    public static class SqlServerDbContextOptionsExtensions
+    public static class DbContextOptionsBuilderExtensions
     {
         #region Methods
 
