@@ -3,7 +3,7 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <PackageId>AutoContext.EntityFrameworkCore</PackageId>
     <Description>AutoContext.EntityFrameworkCore is a lightweight extension of Entity Framework Core for entity to entity configuration mapping.</Description>
-    <Version>1.0.0</Version>
+    <Version>2.0.0</Version>
     <Authors>Dmitry Kiselev</Authors>
     <PackageTags>entity-framework;database;mapping-tools;orm;orm-extension</PackageTags>
     <PackageProjectUrl>https://github.com/holydk/AutoContext.EntityFrameworkCore</PackageProjectUrl>
