@@ -27,6 +27,22 @@ public class YourContext : AutoContextBase
     {
     }
 }
+
+// or for context without inheritance from AutoContext
+public class YourContextWithoutInheritanceFromAutoContext : DbContext
+{
+    public YourContextWithoutInheritance(DbContextOptions options) 
+      : base(options)
+    {
+    }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        Database.ApplyConfigurations(modelBuilder);
+
+        base.OnModelCreating(modelBuilder);
+    }
+}
 ```
 * Define your mapping configurations in any assembly
 ```csharp
