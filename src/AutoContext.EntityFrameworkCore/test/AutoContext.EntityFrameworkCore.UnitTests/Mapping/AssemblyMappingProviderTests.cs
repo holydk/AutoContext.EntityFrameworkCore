@@ -5,7 +5,6 @@ using AutoContext.EntityFrameworkCore.Mapping;
 using FluentAssertions;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
-using Microsoft.EntityFrameworkCore.Internal;
 using Moq;
 using NUnit.Framework;
 using OtherAssemblyWithContext;
@@ -34,7 +33,7 @@ namespace AutoContext.EntityFrameworkCore.UnitTests.Mapping
             _mockDbContextOptions = MockHelpers.CreateMockDbContextOptions(new [] { _mockAutoContextOptionsExtension.Object });
 
             var builder = new DbContextOptionsBuilder();
-            _mockCurrentDbContext = MockHelpers.CreateMockCurrentDbContext(new AutoContext(builder.Options));
+            _mockCurrentDbContext = MockHelpers.CreateMockCurrentDbContext(new AutoContextBase(builder.Options));
 
             InitSubject();
         }
@@ -65,7 +64,7 @@ namespace AutoContext.EntityFrameworkCore.UnitTests.Mapping
 
             UseMappingAssembly(assemblyName);
             InitSubject();
-            
+
             _subject.GetMappings().Should().NotBeEmpty();
         }
 

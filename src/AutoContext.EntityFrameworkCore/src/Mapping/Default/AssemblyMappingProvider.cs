@@ -21,6 +21,11 @@ namespace AutoContext.EntityFrameworkCore.Mapping
 
         #region Ctor
 
+        /// <summary>
+        /// Creates a new instance of <see cref="AssemblyMappingProvider" />.
+        /// </summary>
+        /// <param name="options">The context options.</param>
+        /// <param name="currentContext">The current db context.</param>
         public AssemblyMappingProvider(
             IDbContextOptions options,
             ICurrentDbContext currentContext)
@@ -33,7 +38,7 @@ namespace AutoContext.EntityFrameworkCore.Mapping
             _contextType = currentContext.Context.GetType();
 
             var assemblyName = AutoContextOptionsExtension.Extract(options)?.MappingAssembly;
-            if (assemblyName == null && _contextType == typeof(AutoContext))
+            if (assemblyName == null && _contextType == typeof(AutoContextBase))
             {
                 throw new InvalidOperationException("You should explicitly specify the assembly name in UseMappingAssembly.");
             }

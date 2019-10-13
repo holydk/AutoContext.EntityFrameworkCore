@@ -3,7 +3,7 @@ using System;
 namespace AutoContext.EntityFrameworkCore.Mapping
 {
     /// <summary>
-    /// Identifies the <see cref="DbContext" /> that a class belongs to. For example, this attribute is used
+    /// Identifies the <see cref="Microsoft.EntityFrameworkCore.DbContext" /> that a class belongs to. For example, this attribute is used
     /// to identify which context a mapping configuration applies to.
     /// </summary>
     [AttributeUsage(AttributeTargets.Class)]

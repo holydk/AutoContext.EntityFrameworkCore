@@ -5,7 +5,7 @@ namespace AutoContext.EntityFrameworkCore.Mapping
     /// <summary>
     /// Represents a APIs to apply configurations to database.
     /// <para>
-    /// The service lifetime is <see cref="ServiceLifetime.Scoped" />. This means that each
+    /// The service lifetime is <see cref="Microsoft.Extensions.DependencyInjection.ServiceLifetime.Scoped" />. This means that each
     /// <see cref="DbContext" /> instance will use its own instance of this service.
     /// The implementation may depend on other services registered with any lifetime.
     /// The implementation does not need to be thread-safe.

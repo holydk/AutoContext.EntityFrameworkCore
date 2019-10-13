@@ -26,7 +26,7 @@ namespace AutoContext.EntityFrameworkCore.IntegrationTests.Mapping
         #endregion
 
         [Test]
-        [TestCase(typeof(AutoContext), "AutoContext.EntityFrameworkCore.IntegrationTests")]
+        [TestCase(typeof(AutoContextBase), "AutoContext.EntityFrameworkCore.IntegrationTests")]
         [TestCase(typeof(CurrentAssemblyConfigurations.MultipleContexts.Context1), null)]
         [TestCase(typeof(CurrentAssemblyConfigurations.MultipleContexts.Context2), null)]
         [TestCase(typeof(CurrentAssemblyConfigurations.MultipleContexts.Context1), "AutoContext.EntityFrameworkCore.IntegrationTests")]

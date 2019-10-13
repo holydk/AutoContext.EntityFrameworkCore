@@ -9,7 +9,7 @@ namespace OtherAssemblyWithContext
         {
             #region Context
 
-            public class Context1 : AutoContext.EntityFrameworkCore.AutoContext
+            public class Context1 : AutoContext.EntityFrameworkCore.AutoContextBase
             {
                 public Context1(DbContextOptions options) : base(options)
                 {
@@ -23,7 +23,7 @@ namespace OtherAssemblyWithContext
         {
             #region Context
 
-            public class Context1 : AutoContext.EntityFrameworkCore.AutoContext
+            public class Context1 : AutoContext.EntityFrameworkCore.AutoContextBase
             {
                 public Context1(DbContextOptions options) : base(options)
                 {

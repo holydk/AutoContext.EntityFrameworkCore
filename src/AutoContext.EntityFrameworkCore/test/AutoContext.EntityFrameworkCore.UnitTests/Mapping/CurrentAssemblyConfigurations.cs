@@ -23,12 +23,17 @@ namespace AutoContext.EntityFrameworkCore.UnitTests.Mapping
 
             #region Mappings
 
-            public class AutoContextMappingEntity1 : AutoContextEntityTypeConfiguration<AutoContextEntity1>
+            [MappingConfiguration(contextType: typeof(AutoContextBase))]
+            public abstract class Context1EntityTypeConfiguration<TEntity> : AbstractEntityTypeConfiguration<TEntity> where TEntity : class
+            {
+            }
+
+            public class AutoContextMappingEntity1 : Context1EntityTypeConfiguration<AutoContextEntity1>
             {
                 
             }
 
-            public class AutoContextMappingEntity2 : AutoContextEntityTypeConfiguration<AutoContextEntity2>
+            public class AutoContextMappingEntity2 : Context1EntityTypeConfiguration<AutoContextEntity2>
             {
                 
             }
@@ -54,7 +59,7 @@ namespace AutoContext.EntityFrameworkCore.UnitTests.Mapping
 
             #region Context
 
-            public class Context1 : AutoContext
+            public class Context1 : AutoContextBase
             {
                 public Context1(DbContextOptions options) : base(options)
                 {
@@ -68,14 +73,14 @@ namespace AutoContext.EntityFrameworkCore.UnitTests.Mapping
         {
             #region Context
 
-            public class Context1 : AutoContext
+            public class Context1 : AutoContextBase
             {
                 public Context1(DbContextOptions options) : base(options)
                 {
                 }
             }
 
-            public class Context2 : AutoContext
+            public class Context2 : AutoContextBase
             {
                 public Context2(DbContextOptions options) : base(options)
                 {
