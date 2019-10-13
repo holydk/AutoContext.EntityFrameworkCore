@@ -5,11 +5,15 @@ namespace AutoContext.EntityFrameworkCore
     /// <summary>
     /// Represents a base object context.
     /// </summary>
-    public class AutoContext : DbContext
+    public class AutoContextBase : DbContext
     {
         #region Ctor
 
-        public AutoContext(DbContextOptions options)
+        /// <summary>
+        /// Creates a new instance of <see cref="AutoContextBase" />.
+        /// </summary>
+        /// <param name="options">The context options.</param>
+        public AutoContextBase(DbContextOptions options)
             : base(options)
         {
             

@@ -28,4 +28,4 @@ if ($LASTEXITCODE -ne 0)
 }
 
 #pack
-dotnet pack $proj.FullName -c Release -o ..\artifacts --no-build
+dotnet pack $proj.FullName -c Release -o .\artifacts --no-build

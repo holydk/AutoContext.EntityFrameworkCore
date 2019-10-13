@@ -15,6 +15,10 @@ namespace AutoContext.EntityFrameworkCore.Mapping
 
         #region Ctor
 
+        /// <summary>
+        /// Creates a new instance of <see cref="MappingConfigurator" />.
+        /// </summary>
+        /// <param name="mappingProvider">The mapping provider.</param>
         public MappingConfigurator(IMappingProvider mappingProvider)
         {
             _mappingProvider = mappingProvider;
